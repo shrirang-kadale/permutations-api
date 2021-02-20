@@ -34,10 +34,7 @@ public class PermutationsDaoImpl implements PermutationsDao{
 
 	@Override
 	public List<PermutationData> getPermutations() {
-		String s = "abc";
-		Query query = new Query();
-		query.addCriteria(Criteria.where("inputString").is(s));
-		List<PermutationData> find = mongoTemplate.find(query, PermutationData.class);
+		List<PermutationData> find = mongoTemplate.findAll(PermutationData.class);
 		return find;
 	}
 
