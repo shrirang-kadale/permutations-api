@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.vgroup.permutations.exceptionHandling;
 
 /**

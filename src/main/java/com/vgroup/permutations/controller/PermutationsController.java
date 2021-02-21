@@ -27,10 +27,6 @@ import com.vgroup.permutations.service.PermutationsService;
  *
  */
 
-/**
- * @author skadale
- *
- */
 @RestController
 @RequestMapping(value="/permutations/1.0")
 public class PermutationsController {
@@ -39,8 +35,9 @@ public class PermutationsController {
 	PermutationsService permutationsService;
 	
 	  /**
-	 * @param string
-	 * @return
+	   * Save permutations specific to User role only
+	 * @param InputData
+	 * @return List<PermutationData>
 	 * @throws Exception 
 	 */
 	@PostMapping("/savePermutations")
@@ -59,7 +56,7 @@ public class PermutationsController {
 	  
 	  
 	  /**
-	   * Specific to admin role only
+	   * Get all permutations specific to admin role only
 	 * @return List<PermutationData>
 	 */
 	@GetMapping("/getPermutations")

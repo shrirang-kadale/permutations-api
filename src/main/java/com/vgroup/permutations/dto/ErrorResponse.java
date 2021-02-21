@@ -4,12 +4,12 @@
 package com.vgroup.permutations.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
 /**
  * @author skadale
  *
  */
-import java.util.List;
-
 public class ErrorResponse {
 
 	private LocalDateTime timeStamp;

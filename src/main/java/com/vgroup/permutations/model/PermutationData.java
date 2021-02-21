@@ -20,8 +20,10 @@ public class PermutationData {
 	
 	@JsonInclude(Include.NON_NULL)
 	private String inputString;
+	
 	@JsonInclude(Include.NON_NULL)
 	private Set<String> permutations;
+	
 	@JsonInclude(Include.NON_NULL)
 	private Integer totalPerm;
 

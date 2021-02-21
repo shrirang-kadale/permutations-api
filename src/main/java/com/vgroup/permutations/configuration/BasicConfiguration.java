@@ -1,7 +1,6 @@
 package com.vgroup.permutations.configuration;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -9,10 +8,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * @author skadale
+ *
+ */
 @Configuration
 @EnableWebSecurity
 public class BasicConfiguration extends WebSecurityConfigurerAdapter {
 
+    /**
+     * It is for role based authentication
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     	PasswordEncoder encoder = 
@@ -29,6 +35,9 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
     }
 
 
+    /**
+     * Enabled cors and given permission to access specific URL's using roles
+     */
     @Override
     public void configure(HttpSecurity http) throws Exception {
     	http.cors()

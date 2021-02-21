@@ -31,6 +31,11 @@ public class PermutationsServiceImpl implements PermutationsService{
 	@Autowired
 	private PermutationUtils utils;
 
+	/**
+	 * Return all permutations for all three inputs
+	 * @return List<PermutationData>
+	 * @param InputData
+	 */
 	@Override
 	public List<PermutationData> savePermutations(InputData inputData) {
 		List<PermutationData> list = new ArrayList<>();
@@ -49,6 +54,7 @@ public class PermutationsServiceImpl implements PermutationsService{
 	}
 
 	/**
+	 * @return String 
 	 * @param inputData
 	 * @param i
 	 */
@@ -70,7 +76,6 @@ public class PermutationsServiceImpl implements PermutationsService{
 
 	@Override
 	public List<PermutationData> getPermutations() {
-		// TODO Auto-generated method stub
 		return permutationsDao.getPermutations();
 	}
 
